@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +17,41 @@
             overflow: hidden;
         }
 
-        iframe {
-            border: none;
-            width: 100%;
+        .container {
+            position: relative;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Stretch the image to fill the screen */
+        }
+
+        .text-box {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px 0;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpmWJMCeFFk_BhVmHh8FH8XL7yJCaSibwqcw&s" title="Victor Face Reveal"></iframe>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpmWJMCeFFk_BhVmHh8FH8XL7yJCaSibwqcw&s" alt="Victor Face Reveal" class="image">
+        <div class="text-box">Victor Face Reveal</div>
+    </div>
 </body>
 </html>
